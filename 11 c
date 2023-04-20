@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class VehicleManager {
+    private ArrayList<Vehicle> vehicles = new ArrayList<>();
+
+    public static void main(String[] args) {
+        VehicleManager manager = new VehicleManager();
+        manager.run();
+    }
+
+    public void run() {
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
+        do {
+            displayMenu();
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+            switch (choice) {
+                case 1:
+                    addVehicle(scanner);
+                    break;
+                case 2:
